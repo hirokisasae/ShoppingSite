@@ -255,7 +255,7 @@ input {
 }</style>
 
 <!-- form starts here -->
-<form class="logout-up">
+<form class="log-out">
     <h1 class="sign-up-title">logout</h1>
     <div class="check_on"></div>
     <input type="submit" value="TOP" class="sign-up-button">
