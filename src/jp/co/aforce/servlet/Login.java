@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.DAO.LoginDAO;
-import jp.co.aforce.bean.Customer;
+import jp.co.aforce.bean.Member;
 import jp.co.aforce.tool.Action;
 
 	public class Login extends Action {
@@ -20,10 +20,10 @@ import jp.co.aforce.tool.Action;
 			String password=request.getParameter("password");
 			
 			LoginDAO dao=new LoginDAO();
-			Customer customer=dao.search(member_no, password);
+			Member member=dao.search(member_no, password);
 			
-			if(customer!=null) {
-				session.setAttribute("customer", customer);
+			if(member!=null) {
+				session.setAttribute("customer", member);
 				return "../jsp/login-out.jsp";
 			}
 			
